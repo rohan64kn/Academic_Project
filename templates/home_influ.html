@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        .tab {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .tab:hover {
+            background-color: #e0e0e0;
+        }
+        .active {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab" id="userTab">User</div>
+    <div class="tab" id="campaignTab">Campaign</div>
+    <script>
+        // JavaScript to handle tab switching
+        const monitorTab = document.getElementById('userTab');
+        const campaignTab = document.getElementById('campaignTab');
+
+        userTab.addEventListener('click', () => {
+            // Handle switching to the Monitor tab
+            userTab.classList.add('active');
+            campaignTab.classList.remove('active');
+            // Add logic to show/hide relevant content for the Monitor tab
+        });
+
+        campaignTab.addEventListener('click', () => {
+            // Handle switching to the Campaign tab
+            campaignTab.classList.add('active');
+            userTab.classList.remove('active');
+            // Add logic to show/hide relevant content for the Campaign tab
+        });
+    </script>
+</body>
+</html>
+
+

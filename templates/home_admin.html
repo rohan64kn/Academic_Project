@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        .tab {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: hwb(238 75% 10%);
+            cursor: pointer;
+        }
+        .tab:hover {
+            background-color: #57e627;
+        }
+        .active {
+            background-color: #fb8a08;
+        }
+    </style>
+</head>
+<body bgcolor="emerald">
+    <h1 align="center"> Welcome Admin !</h1>
+    <div class="tab" onclick ="dosomething()" id="userTab">User</div>
+    <div class="tab" id="campaignTab">Campaign</div>
+    
+    <script>
+        // JavaScript to handle tab switching
+        const monitorTab = document.getElementById('userTab');
+        const campaignTab = document.getElementById('campaignTab');
+
+        userTab.addEventListener('click', () => {
+            // Handle switching to the Monitor tab
+            userTab.classList.add('active');
+            campaignTab.classList.remove('active');
+            // Add logic to show/hide relevant content for the Monitor tab
+        });
+        function dosomething()
+        {
+            document.write('Hi There!');
+        }
+        campaignTab.addEventListener('click', () => {
+            // Handle switching to the Campaign tab
+            campaignTab.classList.add('active');
+            addItem();
+            userTab.classList.remove('active');
+            // Add logic to show/hide relevant content for the Campaign tab
+        });
+    </script>
+</body>
+<body>
+    <!-- <ul id="userTab"></ul>
+    <button onclick="addItem()">Add Item</button> -->
+
+    <script>
+        function addItem() {
+            const myList = document.getElementById("myList");
+            const newItem = document.createElement("li");
+            newItem.textContent = "New Item"; // Customize the text as needed
+            myList.appendChild(newItem);
+        }
+    </script>
+</body>
+</html>
+
+
